@@ -1,12 +1,11 @@
-FROM golang:1.16
+FROM golang:1.24
 
-WORKDIR /app
+WORKDIR /myproject
 
 COPY . .
 
-RUN go build 
-
-CMD ["./server"]
+RUN go build
 
 EXPOSE 8080
 
+CMD [ "./server" ]
